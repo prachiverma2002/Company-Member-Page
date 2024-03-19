@@ -1,0 +1,4 @@
+jobs:
+  m_jobs:
+    name: deploy to staging
+    runs-on: windows-latest
