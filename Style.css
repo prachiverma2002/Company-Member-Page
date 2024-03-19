@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 100px 0px;
+    height: 100px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+para {
+    text-align: center;
+    margin: 100px;
+    margin-left: 100px;
+}
+
+hr {
+    border-top: 2px dashed #f589ec;
+    margin: 20px;
+    width: 50%;
+}
+h1 {
+    text-align: center;
+    background-color: #f589ec;
+    box-sizing: border-box;
+    font-size: 45px;
+    color: white;
+    margin-left: 20%;
+    margin-right:20%;
+}
+
+.heading {
+    text-align: center;
+    background-color: #f589ec;
+    box-sizing: border-box;
+    font-size: 30px;
+    color: white;
+    margin-left: 25%;
+    margin-right:25%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+h3 {
+    font-family: bold;
+}
+
+.post{
+    color: #f589ec;
+}
+.our-team {
+    background: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0px 20px;
+    padding: 30px 0 40px;
+    width: 300px;
+}
+
+.our-team .pic {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 0px;
+    z-index: 1;
+    position: relative;
+}
+
+.our-team .pic::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background: #f589ec;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.2;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .pic::before {
+    height: 100%;
+}
+
+.our-team .pic:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #f589ec;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .pic img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+.our-team .team-content {
+    margin-bottom: 30px;
+}
+
+.our-team .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4e5052;
+}
+
+.our-team .social {
+    width: 100%;
+    padding:0;
+    margin:0;
+    background: #f589ec;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+    bottom:0;
+}
+
+.our-team .social li {
+    display: inline-block;
+}
+
+.our-team .social li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.our-team .social li a:hover{
+    color: #f589ec;
+    background: #f7f5ec;
+}
+
+@media (max-width: 720px) {
+    .container {
+        flex-direction: column;
+    }
+    .out-team {
+        width: 80%;
+        margin-top: 30px;
+    }
+}
